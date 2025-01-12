@@ -172,7 +172,7 @@ h1, h2, h3, h4, h5, h6 {
     padding: 60px 0;
 
     background:
-    url(/photo/HomePages.jpg) center no-repeat;
+    url(photo/HomePages.jpg) center no-repeat;
     -webkit-background-size: cover;
     background-size: cover;
     
