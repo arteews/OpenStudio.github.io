@@ -1,0 +1,154 @@
+<!DOCTYPE html> 
+<html lang="ru">
+    <head>
+        <title>OpenStudio</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="icon" type="images/x-icon" href="photo/favicon.ico">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Jura:wght@300..700&family=Oswald:wght@200..700&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/c8ccbed7ab.js" crossorigin="anonymous"></script>
+        <script>
+            function scrollToSection(sectionId) {
+                const section = document.getElementById(sectionId);
+                const targetPosition = section.offsetTop; // Позиция секции
+                const startPosition = window.scrollY;     // Текущее положение
+                const distance = targetPosition - startPosition; // Расстояние до цели
+                const duration = 800; // Длительность анимации в миллисекундах
+                let startTime = null;
+
+                function animation(currentTime) {
+                    if (!startTime) startTime = currentTime;
+                    const timeElapsed = currentTime - startTime;
+                    const run = ease(timeElapsed, startPosition, distance, duration);
+                    window.scrollTo(0, run);
+                    if (timeElapsed < duration) requestAnimationFrame(animation);
+                }
+
+                function ease(t, b, c, d) {
+                    t /= d / 2;
+                    if (t < 1) return c / 2 * t * t + b;
+                    t--;
+                    return -c / 2 * (t * (t - 2) - 1) + b;
+                }
+
+                requestAnimationFrame(animation);
+            }function scrollToSection(sectionId) {
+                const section = document.getElementById(sectionId);
+                const targetPosition = section.offsetTop; // Позиция секции
+                const startPosition = window.scrollY;     // Текущее положение
+                const distance = targetPosition - startPosition; // Расстояние до цели
+                const duration = 800; // Длительность анимации в миллисекундах
+                let startTime = null;
+
+                function animation(currentTime) {
+                    if (!startTime) startTime = currentTime;
+                    const timeElapsed = currentTime - startTime;
+                    const run = ease(timeElapsed, startPosition, distance, duration);
+                    window.scrollTo(0, run);
+                    if (timeElapsed < duration) requestAnimationFrame(animation);
+                }
+
+                function ease(t, b, c, d) {
+                    t /= d / 2;
+                    if (t < 1) return c / 2 * t * t + b;
+                    t--;
+                    return -c / 2 * (t * (t - 2) - 1) + b;
+                }
+
+                requestAnimationFrame(animation);
+            }
+        </script>
+    </head>
+
+    <body>
+
+        <header class="header">
+            <div class="contanier">
+                <div class="header__inner">
+                    <a class="link" href="index.html">
+                        <div class="header__logo">OpenStudio</div>
+                    </a>
+                    <nav class="nav">
+                        <a class="nav__link" href="about.html">О нас</a>
+                        <a class="nav__link" href="comments.html">Отзывы</a>
+                        <a class="nav__link" href="contact.html">Контакты</a>
+                    </nav>
+                </div>
+            </div>
+        </header>
+       
+        <div class="intro">
+            <div class="container">
+                <div class="intro__inner">
+                    <h1 class="intro__title">Разработка</h1>
+                    <h2 class="intro__suptitle">Сайтов, Приложений, Telegram Ботов</h2>
+                    <button class="btn" onclick="scrollToSection('page-1')">
+                        <div >Смотреть больше</div>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <scroll-page id="page-1">
+            <section class="section">
+                <div class="container">
+                    <scroll__contaniner>
+                        <div class="section__header">
+                            <h3 class="section__title">Чем мы занимаемся?</h3>
+                        </div>
+                        <div class="selection__text">
+                            <p>Мы занимаемся разработкой индивидуальных программных решений, созданием веб- и мобильных приложений, обеспечением IT-консалтинга и поддержки. Наши услуги включают автоматизацию бизнес-процессов, интеграцию систем, разработку и внедрение ERP-систем, а также обеспечение кибербезопасности. Мы также специализируемся на анализе и визуализации данных, предоставлении облачных сервисов и технической поддержки. Наша команда профессионалов стремится понимать уникальные потребности каждого клиента, предлагая эффективные и инновационные решения для достижения их бизнес-целей. Кроме того, мы предлагаем сопровождение проектов на всех этапах разработки — от планирования и дизайна до тестирования и внедрения, гарантируя высокое качество и своевременную реализацию.</p>
+                        </div>
+                        <div class="about">
+                        <div class="about__item">
+                            <img src="photo/1.png" alt="">
+                        </div>
+                        <div class="about__item">
+                            <img src="photo/2.png" alt="">
+                        </div>
+                        <div class="about__item">
+                            <img src="photo/3.png" alt="">
+                        </div>
+                    </scroll__contaniner>
+                    </div>
+                </div>
+            </section>
+        </scroll-page>
+
+        <footer class="footer">
+            <div class="container">
+                <div class="footer__logo">OpenStudio</div>
+                <div class="footer__text">Рады сотрудничеству с вами!</div>
+            </div>
+            <div class="footer__social">
+                <div class="footer__icon">
+                    <a title="Instagram" href="https://www.instagram.com/" target="_blank">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a title="FaceBook" href="https://www.facebook.com/" target="_blank">
+                        <i class="fab fa-facebook"></i>
+                    </a>
+                    <a title="Telegram" href="https://telegram.org/" target="_blank">
+                        <i class="fab fa-telegram"></i>
+                    </a>
+                    <a title="Twitter" href="https://x.com/?lang=ru" target="_blank">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a title="TikTok" href="https://www.tiktok.com/explore" target="_blank">
+                        <i class="fab fa-tiktok"></i>
+                    </a>
+                    <a title="YouTube" href="https://www.youtube.com/" target="_blank">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                </div>
+            </div>
+        <div class="copyright">
+            © 2025 OpenStudio by <span>Artyom Romanenko</span>
+        </div>
+        </footer>
+
+
+    </body>
+</html>
+
