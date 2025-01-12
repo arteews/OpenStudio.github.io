@@ -28,7 +28,7 @@ h1, h2, h3, h4, h5, h6 {
     height: 100vh;
 
     background:
-    url(/photo/banner.jpg) center no-repeat;
+    url(OpenStudio.github.io/photo/banner.jpg) center no-repeat;
     -webkit-background-size: cover;
     background-size: cover;
 }
