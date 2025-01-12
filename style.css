@@ -151,22 +151,6 @@ h1, h2, h3, h4, h5, h6 {
     color: #8cadff;
 }
 
-.scroll-container {
-    display: block;
-    width: 350px;
-    height: 200px;
-    overflow-y: scroll;
-    scroll-behavior: smooth;
-}
-
-.scroll-page {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
-    font-size: 5em;
-}
-
 /* Секция 2*/
 .section {
     padding: 60px 0;
@@ -175,7 +159,6 @@ h1, h2, h3, h4, h5, h6 {
     url(photo/HomePages.jpg) center no-repeat;
     -webkit-background-size: cover;
     background-size: cover;
-    
 }
 
 .section__header {
